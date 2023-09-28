@@ -1,6 +1,6 @@
 import axios from "axios";
 import qa from "../../config/qa.js";
-import { expect, use } from "chai";
+import { expect } from "chai";
 
 describe("POST tests for users", () => {
   let userId;
@@ -33,7 +33,7 @@ describe("POST tests for users", () => {
     expect(res.data.data[0].message).to.be.eq("can't be blank");
   });
 
-  it.only("POST user with a wrong token to see 401 status code", async () => {
+  it("POST user with a wrong token to see 401 status code", async () => {
     const postData = qa.randomUserData;
     const res = await axios.post(qa.baseUrl + "users", postData, {
       headers: { Authorization: `Bearer asa1231` },

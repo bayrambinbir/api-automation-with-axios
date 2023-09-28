@@ -1,5 +1,6 @@
 import { faker } from "@faker-js/faker";
 import "dotenv/config";
+import axios from "axios";
 
 const TOKEN = process.env.USER_TOKEN;
 
@@ -35,5 +36,13 @@ export default {
       Authorization: `Bearer ${TOKEN}`,
       "Content-Type": "application/json",
     },
+  },
+  createRamdomUser: async (baseUrl, randomUserData, customConfig) => {
+    const res = await axios.post(
+      baseUrl + "users",
+      randomUserData,
+      customConfig
+    );
+    return res.data.data.id;
   },
 };
