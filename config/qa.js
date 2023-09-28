@@ -25,6 +25,11 @@ export default {
     gender: "male",
     status: "active",
   },
+  incompleteUserData: {
+    name: faker.person.firstName(),
+    gender: "male",
+    status: "active",
+  },
   customConfig: {
     headers: {
       Authorization: `Bearer ${TOKEN}`,
