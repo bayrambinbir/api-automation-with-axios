@@ -24,7 +24,7 @@ describe("DELETE Tests", () => {
     expect(res.data).to.not.null;
   });
 
-  it.only("DELETE a user with INVALID id to see 404 status code", async () => {
+  it("DELETE a user with INVALID id to see 404 status code", async () => {
     const res = await axios.delete(qa.baseUrl + "users/3133", qa.customConfig);
     // console.log(res.data);
     expect(res.status).to.be.eq(200);
