@@ -7,7 +7,7 @@
   "scripts": {
     "cleanMochaReport": "rimraf mochawesome-report/",
     "cleanXml": "rimraf test-results.xml",
-    "test-html": "npm run cleanMochaReport && npx mocha ./api-tests/**/*.js --timeout 3000 --reporter mochawesome",
+    "test-html": "npm run cleanMochaReport && npx mocha ./api-tests/**/*.js --timeout 3000 --reporter html-reporter",
     "test-xml": "npm run cleanXml && npx mocha ./api-tests/**/*.js --timeout 3000 --reporter mocha-junit-reporter"
   },
   "keywords": [],
