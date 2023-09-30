@@ -8,7 +8,7 @@
     "cleanMochaReport": "rimraf mochawesome-report/",
     "cleanXml": "rimraf test-results.xml",
     "test-html": "npm run cleanMochaReport && npx mocha ./api-tests/users/*js --timeout 3000 --reporter mochawesome",
-    "test-xml": "npm run cleanXml && npx mocha ./api-tests/users/*js --timeout 3000 --reporter mocha-junit-reporter"
+    "test-xml": "npx mocha ./api-tests/users/*js --timeout 3000 --reporter mocha-junit-reporter"
   },
   "keywords": [],
   "author": "",
