@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf mochawesome-report/",
+    "test": "npm run clean && npx mocha ./api-tests/users/*js --timeout 3000 --reporter mochawesome"
   },
   "keywords": [],
   "author": "",

@@ -43,8 +43,6 @@ export default {
       randomUserData,
       customConfig
     );
-    console.log("Random user's data: ");
-    console.log(res.data.data);
     return res.data.data.id;
   },
 };
