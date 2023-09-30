@@ -5,10 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "test": "npx mocha ./api-tests/users/*js --timeout 3000",
     "cleanMochaReport": "rimraf mochawesome-report/",
     "cleanXml": "rimraf test-results.xml",
-    "test-html": "npm run cleanMochaReport && npx mocha ./api-tests/users/*js --timeout 3000 --reporter mochawesome",
-    "test-xml": "npm run cleanXml && npx mocha ./api-tests/users/*js --timeout 3000 --reporter mocha-junit-reporter"
+    "test-html": "npm run cleanMochaReport && npm run test --reporter mochawesome",
+    "test-xml": "npm run cleanXml && npm run test --reporter mocha-junit-reporter"
   },
   "keywords": [],
   "author": "",
