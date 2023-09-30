@@ -39,6 +39,6 @@ describe("POST tests for users", () => {
     });
     expect(res.status).to.be.eq(200);
     expect(res.data.code).to.be.eq(401);
-    expect(res.data.data.message).to.be.eq("Invalidd token");
+    expect(res.data.data.message).to.be.eq("Invalid token");
   });
 });
