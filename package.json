@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "npx mocha ./api-tests/users/*js --timeout 3000",
+    "test": "npx mocha ./api-tests/users/*.js --timeout 3000",
     "cleanMochaReport": "rimraf mochawesome-report/",
     "cleanXml": "rimraf test-results.xml",
     "test-html": "npm run cleanMochaReport && npm run test --reporter mochawesome",
