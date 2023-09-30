@@ -17,6 +17,7 @@
     "@faker-js/faker": "^8.1.0",
     "axios": "^1.5.1",
     "chai": "^4.3.9",
+    "html-reporter": "^9.12.0",
     "mocha": "^10.2.0",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3"
